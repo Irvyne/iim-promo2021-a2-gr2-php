@@ -1,0 +1,8 @@
+<?php
+
+return [
+    "host"     => "localhost",
+    "user"     => "root",
+    "password" => "toor",
+    "dbname"   => "iim_a2_promo2021",
+];
