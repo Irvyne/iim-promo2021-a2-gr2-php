@@ -1,8 +1,6 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+require __DIR__.'/function/user.fn.php';
 
 $db = require __DIR__."/parameters.php";
 
@@ -12,6 +10,7 @@ try {
         $db['user'],
         $db['password']
     );
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     mail("thibaud.bardin@gmail.com", "Error BDD IIM", $e->getMessage());
     echo "<h1>Error establishing connection to database...</h1>";
