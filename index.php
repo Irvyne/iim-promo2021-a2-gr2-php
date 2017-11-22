@@ -3,7 +3,7 @@
 require __DIR__ . "/config.php";
 
 // $i++ || $i += 1 || $i = $i + 1
-dump(
+var_dump(
     getUsers($pdo, 100, 100)
 );
 
