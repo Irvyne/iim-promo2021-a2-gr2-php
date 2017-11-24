@@ -11,7 +11,8 @@ function createUser(PDO $pdo, $email, $password)
     // Executed Statement
     return $stmt->execute([
         "email"    => $email,
-        "password" => $password,
+        "password" => password_hash($password, PASSWORD_BCRYPT),
+        // password_verify($motDePasseEnClair, $motDePasseHashé);
     ]);
 }
 

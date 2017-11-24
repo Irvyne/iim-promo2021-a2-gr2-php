@@ -1,6 +1,9 @@
 <?php
 
+date_default_timezone_set('UTC');
+
 require __DIR__.'/function/user.fn.php';
+require __DIR__.'/function/article.fn.php';
 
 $db = require __DIR__."/parameters.php";
 
